@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-950: #050e22;
+  --color-navy-900: #0a1a35;
+  --color-navy-800: #0f2047;
+  --color-navy-700: #172a5c;
+  --color-navy-600: #22407f;
+
+  --color-brand-blue-50: #eff9ff;
+  --color-brand-blue-100: #dcf0fd;
+  --color-brand-blue-200: #b9e1fb;
+  --color-brand-blue-300: #7bcaf7;
+  --color-brand-blue-400: #38aef0;
+  --color-brand-blue-500: #1a9bdc;
+  --color-brand-blue-600: #0d7dbb;
+  --color-brand-blue-700: #0d6497;
+  --color-brand-blue-800: #11547d;
+  --color-brand-blue-900: #134768;
+
+  --color-brand-green-50: #f0fdf4;
+  --color-brand-green-100: #dcfce7;
+  --color-brand-green-200: #bbf7d0;
+  --color-brand-green-300: #86efac;
+  --color-brand-green-400: #4ade80;
+  --color-brand-green-500: #22c55e;
+  --color-brand-green-600: #16a34a;
+  --color-brand-green-700: #15803d;
+  --color-brand-green-800: #166534;
+  --color-brand-green-900: #14532d;
+
+  --color-cream-50: #fbf9f2;
+  --color-cream-100: #f6f1dd;
+  --color-cream-200: #ede3bc;
+  --color-cream-300: #e3d395;
+
+  --color-ink: #0a1a35;
+  --color-slate-text: #475569;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-jakarta), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-brand: 1.25rem;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0a1a35;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Offset anchor scroll targets so the sticky header doesn't cover them */
+  scroll-padding-top: 9rem; /* ~144px — matches max header height */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv11", "ss01", "ss03";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Hero dotted/grid background */
+.bg-grid-navy {
+  background-color: #0a1a35;
+  background-image:
+    radial-gradient(circle at 20% 15%, rgba(26, 155, 220, 0.18), transparent 40%),
+    radial-gradient(circle at 82% 70%, rgba(34, 197, 94, 0.12), transparent 45%),
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: auto, auto, 56px 56px, 56px 56px;
+  background-position: 0 0, 0 0, -1px -1px, -1px -1px;
+}
+
+.bg-grid-cream {
+  background-color: #fbf9f2;
+  background-image:
+    linear-gradient(rgba(10,26,53,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10,26,53,0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Subtle animated orbs for hero */
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(15px, -20px); }
+}
+
+.orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(60px);
+  opacity: 0.55;
+  animation: drift 14s ease-in-out infinite;
+}
+
+/* Marquee for trust bar */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+/* Card hover lift */
+.card-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Gradient text */
+.text-gradient-brand {
+  background: linear-gradient(135deg, #38aef0 0%, #22c55e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Consistent keyboard focus ring */
+:focus-visible {
+  outline: 2px solid var(--color-brand-blue-500);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+/* Respect users who request reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee {
+    animation: none !important;
+  }
+  .orb {
+    animation: none !important;
+  }
+}
