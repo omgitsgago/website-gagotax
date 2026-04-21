@@ -103,18 +103,19 @@ export default function AboutPage() {
         <section className="bg-cream-50 py-20 sm:py-28">
           <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-              <div className="relative aspect-[4/5] overflow-hidden rounded-3xl lg:col-span-5">
-                <Image
-                  src="/photos/yakubu.jpg"
-                  alt="Yakubu Gago, Founder & CPA at GagoTax"
-                  fill
-                  className="object-cover scale-125 object-[center_10%] brightness-110"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <p className="text-base font-bold text-white">Yakubu Gago</p>
-                  <p className="text-sm text-white/75">Founder &amp; CPA</p>
+              <div className="flex flex-col items-center gap-6 lg:col-span-5">
+                <div className="relative h-72 w-72 overflow-hidden rounded-full shadow-xl ring-4 ring-white sm:h-80 sm:w-80">
+                  <Image
+                    src="/photos/yakubu.jpg"
+                    alt="Yakubu Gago, Founder & CPA at GagoTax"
+                    fill
+                    className="object-cover scale-125 object-[center_10%]"
+                    sizes="320px"
+                  />
+                </div>
+                <div className="text-center">
+                  <p className="text-xl font-bold text-navy-900">Yakubu Gago</p>
+                  <p className="text-sm text-slate-text">Founder &amp; CPA</p>
                 </div>
               </div>
               <div className="lg:col-span-7">
