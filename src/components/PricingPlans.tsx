@@ -41,7 +41,6 @@ const taxPlans: Plan[] = [
       "Free federal e-filing",
       "Free federal extension filing",
       "Review tax return with your CPA",
-      { text: "Audit support", footnote: 3 },
     ],
     cta: "Choose Essentials",
     hrefMonthly: "https://buy.stripe.com/cNicN6giSaFw64C901bsc09",
@@ -60,8 +59,9 @@ const taxPlans: Plan[] = [
     featuresHeader: "Everything in Essentials, plus:",
     features: [
       "10% off tax returns, notices & other services",
-      { text: "Text your CPA (3 questions / month)", footnote: 1 },
+      { text: "Text your CPA", footnote: 1 },
       "IRS & state notice response",
+      { text: "Audit support", footnote: 3 },
       "Annual tax planning session",
       "Unlimited additional state returns",
       "Quarterly tax estimates — free",
@@ -86,7 +86,7 @@ const taxPlans: Plan[] = [
       "20% off tax returns, notices & other services",
       "15% off bookkeeping subscription",
       "Quarterly tax planning sessions",
-      { text: "CPA call up to 50 min — no charge", footnote: 2 },
+      { text: "Advisory Calls Included", footnote: 2 },
       "Unlimited CPA text access",
       "Free Annual Statement of Information filing",
       { text: "Priority turnaround on all requests & tax prep", bold: true },
@@ -274,7 +274,7 @@ export function PricingPlans({
               <sup className="mr-0.5 font-semibold">1</sup>Quick questions answered within the same business week. For complex matters, we&apos;ll schedule a call.
             </p>
             <p className="text-xs leading-relaxed text-slate-400">
-              <sup className="mr-0.5 font-semibold">2</sup>One CPA call per year, up to 50 minutes. Additional calls billed at standard rate.
+              <sup className="mr-0.5 font-semibold">2</sup>Limited to up to 45 min. Once per month.
             </p>
             <p className="text-xs leading-relaxed text-slate-400">
               <sup className="mr-0.5 font-semibold">3</sup>Includes first 5 hours of IRS or state audit representation at no charge. Additional hours billed at a discounted member rate.
@@ -301,7 +301,7 @@ function TabButton({
       role="tab"
       aria-selected={active}
       onClick={onClick}
-      className={`relative -mb-px pb-3 text-[10px] font-semibold uppercase tracking-wider transition-colors ${
+      className={`relative -mb-px pb-3 text-sm font-semibold uppercase tracking-wider transition-colors ${
         active ? "text-navy-900" : "text-slate-text hover:text-navy-900"
       }`}
     >

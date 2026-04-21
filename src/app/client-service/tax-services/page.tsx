@@ -24,7 +24,8 @@ export default function TaxServicesPlansPage() {
                 Tax Plans
               </div>
               <h1 className="mt-6 text-4xl font-bold leading-[1.1] tracking-tight text-navy-900 sm:text-5xl">
-                File with confidence.{" "}
+                File with confidence.
+                <br />
                 <span className="text-brand-blue-500">No surprises.</span>
               </h1>
             </div>
