@@ -19,7 +19,8 @@ type Plan = {
   featuresHeader: string | null;
   features: Feature[];
   cta: string;
-  href: string;
+  hrefMonthly: string;
+  hrefAnnual: string;
   highlight: boolean;
 };
 
@@ -43,7 +44,8 @@ const taxPlans: Plan[] = [
       { text: "Audit support", footnote: 3 },
     ],
     cta: "Choose Essentials",
-    href: "/contact?plan=tax-essentials",
+    hrefMonthly: "https://buy.stripe.com/cNicN6giSaFw64C901bsc09",
+    hrefAnnual: "https://buy.stripe.com/7sY14o0jU5lcboWfopbsc0a",
     highlight: false,
   },
   {
@@ -66,7 +68,8 @@ const taxPlans: Plan[] = [
       "Free federal extension filing",
     ],
     cta: "Choose Premium",
-    href: "/contact?plan=tax-premium",
+    hrefMonthly: "https://buy.stripe.com/7sY28s3w6dRI50ygstbsc04",
+    hrefAnnual: "https://buy.stripe.com/bJeeVec2C5lcakS4JLbsc05",
     highlight: true,
   },
   {
@@ -89,7 +92,8 @@ const taxPlans: Plan[] = [
       { text: "Priority turnaround on all requests & tax prep", bold: true },
     ],
     cta: "Choose Platinum",
-    href: "/contact?plan=tax-platinum",
+    hrefMonthly: "https://buy.stripe.com/fZu5kEgiS6pg3Wueklbsc06",
+    hrefAnnual: "https://buy.stripe.com/9B67sM8QqbJAfFc4JLbsc07",
     highlight: false,
   },
 ];
@@ -115,7 +119,8 @@ const bookkeepingPlans: Plan[] = [
       "Assistance from your CPA",
     ],
     cta: "Choose Startup",
-    href: "/contact?plan=bk-startup",
+    hrefMonthly: "https://buy.stripe.com/6oU9AUeaKeVM8cKccdbsc0b",
+    hrefAnnual: "https://buy.stripe.com/8x23cw9Uu14WfFc2BDbsc0c",
     highlight: false,
   },
   {
@@ -136,7 +141,8 @@ const bookkeepingPlans: Plan[] = [
       "Financial reports prepared for tax filing",
     ],
     cta: "Choose Standard",
-    href: "/contact?plan=bk-standard",
+    hrefMonthly: "https://buy.stripe.com/6oU00k4Aa6pg3Wu2BDbsc0d",
+    hrefAnnual: "https://buy.stripe.com/6oU9AU1nYdRIakSb89bsc0e",
     highlight: true,
   },
   {
@@ -157,7 +163,8 @@ const bookkeepingPlans: Plan[] = [
       { text: "Company financial planning with CPA", bold: true },
     ],
     cta: "Choose Deluxe",
-    href: "/contact?plan=bk-deluxe",
+    hrefMonthly: "https://buy.stripe.com/7sYcN67MmcNE64C5NPbsc0f",
+    hrefAnnual: "https://buy.stripe.com/5kQ3cw9UucNEboWgstbsc0g",
     highlight: false,
   },
 ];
@@ -312,6 +319,7 @@ function TabButton({
 function PlanCard({ plan, billing }: { plan: Plan; billing: Billing }) {
   const showAnnual = billing === "annual";
   const shownPrice = showAnnual ? plan.annualPerMonth : plan.monthly;
+  const href = showAnnual ? plan.hrefAnnual : plan.hrefMonthly;
 
   return (
     <div
@@ -444,7 +452,9 @@ function PlanCard({ plan, billing }: { plan: Plan; billing: Billing }) {
 
       {/* CTA */}
       <Link
-        href={plan.href}
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
         className={`mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-semibold transition-all ${
           plan.highlight
             ? "bg-brand-green-500 text-navy-950 shadow-lg shadow-brand-green-500/20 hover:bg-brand-green-400"
