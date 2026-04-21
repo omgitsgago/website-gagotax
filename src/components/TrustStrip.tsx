@@ -24,7 +24,7 @@ export function TrustStrip() {
             {[...industries, ...industries].map((name, i) => (
               <span
                 key={`${name}-${i}`}
-                className="whitespace-nowrap rounded-full border border-navy-900/10 bg-cream-50 px-5 py-2 text-sm font-medium text-navy-900"
+                className="whitespace-nowrap rounded-full border border-navy-700/25 bg-white px-5 py-2 text-sm font-medium text-navy-900 shadow-sm"
               >
                 {name}
               </span>

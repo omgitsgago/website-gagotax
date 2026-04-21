@@ -81,11 +81,11 @@ export function ServicesPillars() {
         <AnimateIn from="left">
           <div className="grid gap-12 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-7">
-              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-blue-600">
+              <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-blue-600">
                 <span className="h-1.5 w-1.5 rounded-full bg-brand-blue-500" />
                 Why choose us
               </div>
-              <h2 className="mt-5 max-w-3xl text-4xl font-bold tracking-tight text-navy-900 sm:text-5xl">
+              <h2 className="mt-3 max-w-3xl text-2xl font-semibold tracking-tight text-navy-900 sm:text-3xl">
                 Three pillars. One partner.
               </h2>
             </div>
@@ -97,7 +97,7 @@ export function ServicesPillars() {
             <AnimateIn key={pillar.id} delay={idx * 120} from="left" className="flex flex-col">
               <div
                 id={pillar.id}
-                className="card-lift group relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-navy-900/10 bg-white p-8 shadow-sm hover:border-navy-900/20 hover:shadow-xl"
+                className="card-lift group relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-navy-900/12 bg-white p-8 shadow hover:border-navy-900/20 hover:shadow-xl"
               >
                 <div className={`mb-6 inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br ${pillar.accent} text-white shadow-md`}>
                   <div className="h-6 w-6">{pillar.icon}</div>

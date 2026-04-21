@@ -17,9 +17,9 @@ const testimonials = [
   },
   {
     quote:
-      "They took over a messy multi-state situation with W-2, 1099, and K-1 income and made it feel simple. Zero notices since.",
-    author: "Independent consultant",
-    role: "Professional services",
+      "I came with a messy situation — missed a couple years, had lots of W-2s and 1099s. They made it feel simple from start to end. Since coming over to the firm I haven't received any notices and I no longer owe the IRS and state. Thank you so much.",
+    author: "Music Artist / DJ",
+    role: "Individual · S-Corp",
   },
 ];
 

@@ -39,6 +39,7 @@
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-jakarta), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif-display: var(--font-playfair), ui-serif, Georgia, serif;
 
   --radius-brand: 1.25rem;
 }
@@ -127,6 +128,37 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+/* Word color-wipe — blue overlay reveals left→right via clip-path */
+.word-wipe-blue {
+  position: relative;
+  display: inline-block;
+  color: #0a1a35;
+}
+
+.word-wipe-blue::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: #1a9bdc;
+  clip-path: inset(0 100% 0 0);
+  animation-name: word-wipe-reveal;
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-delay: var(--wipe-delay, 1000ms);
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
+@keyframes word-wipe-reveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .word-wipe-blue { color: #1a9bdc; }
+  .word-wipe-blue::after { animation: none; clip-path: inset(0 0 0 0); }
 }
 
 /* Consistent keyboard focus ring */

@@ -26,8 +26,8 @@ export function Header() {
     <header
       className={`fixed left-0 right-0 top-0 z-50 w-full transition-all duration-300 ${
         scrolled
-          ? "border-b border-navy-900/10 bg-white/90 shadow-sm backdrop-blur-xl"
-          : "bg-transparent"
+          ? "border-b border-navy-900/10 bg-white/95 shadow-sm backdrop-blur"
+          : "bg-white"
       }`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-2.5 sm:px-8 lg:px-10">
@@ -49,11 +49,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`text-sm font-medium transition-colors ${
-                scrolled
-                  ? "text-navy-900/80 hover:text-brand-blue-600"
-                  : "text-white/80 hover:text-white"
-              }`}
+              className="text-sm font-medium text-navy-900/80 transition-colors hover:text-brand-blue-600"
             >
               {item.label}
             </Link>
@@ -66,11 +62,7 @@ export function Header() {
             href="https://gagoaccountingfinance.taxdome.com/login"
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-medium transition-colors ${
-              scrolled
-                ? "border-navy-900/20 text-navy-900/80 hover:border-navy-900/40 hover:text-navy-900"
-                : "border-white/25 text-white/80 hover:border-white/50 hover:text-white"
-            }`}
+            className="inline-flex items-center gap-1.5 rounded-full border border-navy-900/20 px-4 py-2 text-sm font-medium text-navy-900/80 transition-colors hover:border-navy-900/40 hover:text-navy-900"
           >
             Client Portal
             <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -82,7 +74,7 @@ export function Header() {
           {/* Contact Us — always green */}
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-brand-green-500 px-5 py-2.5 text-sm font-semibold text-navy-950 shadow-sm shadow-brand-green-500/20 transition-all hover:bg-brand-green-400 hover:shadow-brand-green-500/30"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-green-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-brand-green-500/30 transition-all hover:bg-brand-green-400 hover:shadow-brand-green-500/40"
           >
             Contact Us
             <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -95,9 +87,7 @@ export function Header() {
         {/* Mobile menu toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`inline-flex items-center justify-center rounded-lg p-2 md:hidden ${
-            scrolled ? "text-navy-900" : "text-white"
-          }`}
+          className="inline-flex items-center justify-center rounded-lg p-2 text-navy-900 md:hidden"
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
         >

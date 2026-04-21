@@ -40,45 +40,18 @@ export default function AboutPage() {
     <>
       <Header />
       <main className="flex-1">
-        {/* Hero — matches homepage style */}
-        <section className="relative overflow-hidden bg-navy-950 pb-16 pt-24 text-white sm:pb-20 sm:pt-32">
-          {/* Dot grid */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 opacity-[0.035]"
-            style={{
-              backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
-              backgroundSize: "36px 36px",
-            }}
-          />
-          {/* Ambient glow */}
-          <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 flex justify-center">
-            <div
-              style={{
-                width: "800px",
-                height: "500px",
-                background:
-                  "radial-gradient(ellipse at 50% 0%, rgba(74,222,128,0.08) 0%, transparent 65%)",
-              }}
-            />
-          </div>
-          {/* Small floating accent dots */}
-          <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-            <div className="absolute right-[12%] top-[22%] h-2.5 w-2.5 rounded-full bg-brand-green-400/25" />
-            <div className="absolute right-[7%] top-[42%] h-2 w-2 rounded-full bg-brand-blue-400/20" />
-            <div className="absolute bottom-[28%] left-[8%] h-2 w-2 rounded-full bg-brand-green-400/20" />
-          </div>
-
+        {/* Hero */}
+        <section className="relative overflow-hidden bg-cream-50 pb-16 pt-24 sm:pb-20 sm:pt-32">
           <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="mx-auto max-w-3xl text-center">
-              <div className="text-sm font-bold uppercase tracking-[0.25em] text-brand-green-400">
+              <div className="text-sm font-bold uppercase tracking-[0.25em] text-brand-blue-600">
                 About the firm
               </div>
-              <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+              <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight text-navy-900 sm:text-5xl lg:text-6xl">
                 Strategic tax savings.{" "}
-                <span className="text-gradient-brand whitespace-nowrap">Built around you.</span>
+                <span className="text-brand-blue-500 whitespace-nowrap">Built around you.</span>
               </h1>
-              <p className="mt-6 text-base leading-relaxed text-white/70">
+              <p className="mt-6 text-base leading-relaxed text-slate-600">
                 GagoTax is a full-service CPA firm helping individuals, business owners,
                 entrepreneurs, and professionals stay compliant, strategically
                 reduce taxes, and make confident financial decisions year-round.
@@ -92,7 +65,7 @@ export default function AboutPage() {
           <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
               <div className="lg:col-span-5">
-                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-blue-600">
+                <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-blue-600">
                   <span className="h-1.5 w-1.5 rounded-full bg-brand-blue-500" />
                   Our Approach
                 </div>
@@ -141,7 +114,7 @@ export default function AboutPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-900/50 via-transparent to-transparent" />
               </div>
               <div className="lg:col-span-7">
-                <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-green-600">
+                <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-green-600">
                   <span className="h-1.5 w-1.5 rounded-full bg-brand-green-500" />
                   What we stand for
                 </div>
@@ -176,7 +149,7 @@ export default function AboutPage() {
         <section id="industries" className="bg-white py-20 sm:py-28">
           <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="mx-auto max-w-3xl text-center">
-              <div className="text-xs font-semibold uppercase tracking-widest text-navy-900">
+              <div className="text-sm font-semibold uppercase tracking-widest text-brand-blue-600">
                 Industries we know deeply
               </div>
               <h2 className="mt-5 text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
@@ -199,7 +172,7 @@ export default function AboutPage() {
               ].map((industry) => (
                 <div
                   key={industry}
-                  className="flex min-h-[72px] items-center justify-center rounded-2xl border border-navy-900/10 bg-cream-50 px-4 py-4 text-center text-xs font-semibold text-navy-900"
+                  className="flex min-h-[72px] items-center justify-center rounded-2xl border border-navy-700/25 bg-white px-4 py-4 text-center text-xs font-semibold text-navy-900 shadow-sm"
                 >
                   {industry}
                 </div>

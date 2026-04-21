@@ -57,17 +57,17 @@ const steps = [
 
 export function Process() {
   return (
-    <section className="bg-navy-950 py-20 sm:py-28">
+    <section className="bg-white py-20 sm:py-28">
       <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <div className="text-sm font-bold uppercase tracking-[0.25em] text-brand-green-400">
+          <div className="text-sm font-bold uppercase tracking-[0.25em] text-brand-blue-600">
             How It Works
           </div>
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-5xl">
+          <h2 className="mt-5 text-3xl font-bold tracking-tight text-navy-900 sm:text-5xl">
             Getting started is simple.
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-white/60">
+          <p className="mt-4 text-base leading-relaxed text-slate-600">
             From first call to year-round partner — four steps, no surprises.
           </p>
         </div>
@@ -76,14 +76,14 @@ export function Process() {
         <div className="mx-auto mt-14 max-w-2xl space-y-4">
           {steps.map((s, idx) => (
             <AnimateIn key={s.step} delay={idx * 120} from="left">
-              <div className="relative flex gap-5 rounded-2xl bg-white p-7 shadow-sm">
+              <div className="relative flex gap-5 rounded-2xl border border-navy-900/5 bg-white p-7 shadow-sm">
                 {/* Step number — top right */}
-                <span className="absolute right-6 top-5 text-sm font-bold text-navy-900/20">
+                <span className="absolute right-6 top-5 text-sm font-bold text-navy-900/45">
                   {s.step}
                 </span>
 
                 {/* Icon circle */}
-                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-brand-green-400 text-navy-950">
+                <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-full bg-brand-blue-500 text-white">
                   <div className="h-5 w-5">{s.icon}</div>
                 </div>
 

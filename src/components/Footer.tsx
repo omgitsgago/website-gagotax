@@ -28,7 +28,7 @@ const footerNav = {
 
 export function Footer() {
   return (
-    <footer className="bg-navy-950 text-white/80">
+    <footer className="bg-cream-50 text-navy-900/80">
       <div className="mx-auto w-full max-w-7xl px-6 py-12 sm:px-8 lg:px-10 lg:py-16">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:items-start">
           {/* Left: logo + description + contact */}
@@ -42,19 +42,19 @@ export function Footer() {
                 className="h-10 w-auto"
               />
             </Link>
-            <p className="mt-5 max-w-md text-base leading-relaxed text-white/70">
+            <p className="mt-5 max-w-md text-base leading-relaxed text-navy-900/70">
               A CPA-led tax, accounting, and advisory firm built to help business
               owners keep more of what they earn — year-round.
             </p>
-            <div className="mt-6 flex flex-col gap-2 text-sm text-white/70">
-              <a href="mailto:contact@gagotax.com" className="hover:text-white">
+            <div className="mt-6 flex flex-col gap-2 text-sm text-navy-900/70">
+              <a href="mailto:contact@gagotax.com" className="hover:text-navy-900">
                 contact@gagotax.com
               </a>
               <a
                 href="https://gagoaccountingfinance.taxdome.com/login"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white"
+                className="hover:text-navy-900"
               >
                 Client Portal →
               </a>
@@ -65,7 +65,7 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-7">
             {Object.entries(footerNav).map(([title, links]) => (
               <div key={title}>
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-white">
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-navy-900">
                   {title}
                 </h3>
                 <ul className="mt-5 space-y-3">
@@ -76,14 +76,14 @@ export function Footer() {
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-sm text-white/70 transition-colors hover:text-white"
+                          className="text-sm text-navy-900/70 transition-colors hover:text-navy-900"
                         >
                           {link.label}
                         </a>
                       ) : (
                         <Link
                           href={link.href}
-                          className="text-sm text-white/70 transition-colors hover:text-white"
+                          className="text-sm text-navy-900/70 transition-colors hover:text-navy-900"
                         >
                           {link.label}
                         </Link>
@@ -96,11 +96,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-white/60">
+        <div className="mt-12 flex flex-col gap-4 border-t border-navy-900/10 pt-8 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-navy-900/60">
             © {new Date().getFullYear()} GagoTax Incorporated. All rights reserved.
           </p>
-          <p className="text-sm text-white/60">
+          <p className="text-sm text-navy-900/60">
             Strategic Tax Savings · Proactive Planning · Seamless Service
           </p>
         </div>

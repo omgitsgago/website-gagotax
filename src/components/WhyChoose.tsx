@@ -58,7 +58,7 @@ export function WhyChoose() {
         <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
           {/* Left column */}
           <AnimateIn from="left" className="lg:col-span-5">
-            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-green-600">
+            <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-green-600">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-green-600" />
               Why GagoTax
             </div>
@@ -71,7 +71,7 @@ export function WhyChoose() {
             </p>
             <Link
               href="/contact"
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-green-500 px-6 py-3 text-sm font-semibold text-navy-950 shadow-sm shadow-brand-green-500/20 transition-all hover:bg-brand-green-400 hover:shadow-brand-green-500/30"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-green-500 px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-brand-green-500/20 transition-all hover:bg-brand-green-400 hover:shadow-brand-green-500/30"
             >
               Contact Us
               <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

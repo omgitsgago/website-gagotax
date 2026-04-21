@@ -17,45 +17,18 @@ export default function ContactPage() {
     <>
       <Header />
       <main className="flex-1">
-        {/* Hero — matches homepage style */}
-        <section className="relative overflow-hidden bg-navy-950 pb-14 pt-24 text-white sm:pb-20 sm:pt-32">
-          {/* Dot grid */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 opacity-[0.035]"
-            style={{
-              backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
-              backgroundSize: "36px 36px",
-            }}
-          />
-          {/* Ambient glow */}
-          <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 flex justify-center">
-            <div
-              style={{
-                width: "800px",
-                height: "500px",
-                background:
-                  "radial-gradient(ellipse at 50% 0%, rgba(74,222,128,0.08) 0%, transparent 65%)",
-              }}
-            />
-          </div>
-          {/* Small floating accent dots */}
-          <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-            <div className="absolute right-[12%] top-[22%] h-2.5 w-2.5 rounded-full bg-brand-green-400/25" />
-            <div className="absolute right-[7%] top-[50%] h-2 w-2 rounded-full bg-brand-blue-400/20" />
-            <div className="absolute bottom-[20%] left-[8%] h-2 w-2 rounded-full bg-brand-green-400/20" />
-          </div>
-
+        {/* Hero */}
+        <section className="relative overflow-hidden bg-cream-50 pb-14 pt-24 sm:pb-20 sm:pt-32">
           <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="mx-auto max-w-3xl text-center">
-              <div className="text-sm font-bold uppercase tracking-[0.25em] text-brand-green-400">
+              <div className="text-sm font-bold uppercase tracking-[0.25em] text-brand-blue-600">
                 Get in touch
               </div>
-              <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+              <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight text-navy-900 sm:text-5xl lg:text-6xl">
                 Let&apos;s start a{" "}
-                <span className="text-gradient-brand whitespace-nowrap">conversation.</span>
+                <span className="text-brand-blue-500 whitespace-nowrap">conversation.</span>
               </h1>
-              <p className="mt-6 text-base leading-relaxed text-white/70">
+              <p className="mt-6 text-base leading-relaxed text-slate-600">
                 Tell us about your business and what you&apos;re looking for. We&apos;ll
                 come back within one business day with next steps.
               </p>
@@ -78,18 +51,6 @@ export default function ContactPage() {
                       Afterward, you&apos;ll get a written scope and flat fee
                       before we do any work.
                     </p>
-                  </div>
-
-                  <div className="rounded-3xl border border-navy-900/10 bg-cream-50 p-6">
-                    <div className="text-xs font-semibold uppercase tracking-wider text-navy-900">
-                      Email
-                    </div>
-                    <a
-                      href="mailto:contact@gagotax.com"
-                      className="mt-2 block text-lg font-semibold text-navy-900 hover:text-brand-blue-700"
-                    >
-                      contact@gagotax.com
-                    </a>
                   </div>
 
                   <div className="rounded-3xl border border-navy-900/10 bg-white p-6 shadow-sm">

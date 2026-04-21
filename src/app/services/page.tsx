@@ -119,45 +119,18 @@ export default function ServicesPage() {
     <>
       <Header />
       <main className="flex-1">
-        {/* Hero — matches homepage style */}
-        <section className="relative overflow-hidden bg-navy-950 pb-16 pt-24 text-white sm:pb-20 sm:pt-32">
-          {/* Dot grid */}
-          <div
-            aria-hidden
-            className="pointer-events-none absolute inset-0 opacity-[0.035]"
-            style={{
-              backgroundImage: "radial-gradient(circle, white 1px, transparent 1px)",
-              backgroundSize: "36px 36px",
-            }}
-          />
-          {/* Ambient glow */}
-          <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 flex justify-center">
-            <div
-              style={{
-                width: "800px",
-                height: "500px",
-                background:
-                  "radial-gradient(ellipse at 50% 0%, rgba(74,222,128,0.08) 0%, transparent 65%)",
-              }}
-            />
-          </div>
-          {/* Small floating accent dots */}
-          <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
-            <div className="absolute right-[12%] top-[20%] h-2.5 w-2.5 rounded-full bg-brand-green-400/25" />
-            <div className="absolute right-[7%] top-[40%] h-2 w-2 rounded-full bg-brand-blue-400/20" />
-            <div className="absolute bottom-[25%] left-[8%] h-2 w-2 rounded-full bg-brand-green-400/20" />
-          </div>
-
+        {/* Hero */}
+        <section className="relative overflow-hidden bg-cream-50 pb-16 pt-24 sm:pb-20 sm:pt-32">
           <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="mx-auto max-w-3xl text-center">
-              <div className="text-sm font-bold uppercase tracking-[0.25em] text-brand-green-400">
+              <div className="text-sm font-bold uppercase tracking-[0.25em] text-brand-blue-600">
                 What we do
               </div>
-              <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
+              <h1 className="mt-6 text-4xl font-bold leading-[1.05] tracking-tight text-navy-900 sm:text-5xl lg:text-6xl">
                 Tax, accounting, and advisory —{" "}
-                <span className="text-gradient-brand whitespace-nowrap">under one roof.</span>
+                <span className="text-brand-blue-500 whitespace-nowrap">under one roof.</span>
               </h1>
-              <p className="mt-6 text-base leading-relaxed text-white/70 sm:text-lg">
+              <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
                 Every engagement is scoped to your situation and quoted in writing
                 before we start. No surprises, no mystery.
               </p>
@@ -195,7 +168,7 @@ export default function ServicesPage() {
                 {/* Content */}
                 <div className="lg:col-span-6">
                   {/* Eyebrow above title */}
-                  <div className={`flex items-center gap-2 text-xs font-semibold uppercase tracking-widest ${cat.eyebrowColor}`}>
+                  <div className={`flex items-center gap-2 text-sm font-semibold uppercase tracking-widest ${cat.eyebrowColor}`}>
                     <span className={`h-1.5 w-1.5 rounded-full ${cat.dotColor}`} />
                     {cat.eyebrow}
                   </div>
@@ -238,7 +211,7 @@ export default function ServicesPage() {
                   <div className="mt-8">
                     <Link
                       href="/contact"
-                      className="inline-flex items-center gap-2 rounded-full bg-navy-900 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-navy-800"
+                      className="inline-flex items-center gap-2 rounded-full bg-brand-green-500 px-5 py-3 text-sm font-semibold text-white shadow-sm shadow-brand-green-500/20 transition-all hover:bg-brand-green-400 hover:shadow-brand-green-500/30"
                     >
                       Get a quote
                       <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

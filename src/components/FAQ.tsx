@@ -66,7 +66,7 @@ export function FAQ() {
               </p>
               <Link
                 href="/contact"
-                className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-green-500 px-6 py-3 text-sm font-semibold text-navy-950 transition-all hover:bg-brand-green-400"
+                className="mt-8 inline-flex items-center gap-2 rounded-full bg-brand-green-500 px-6 py-3 text-sm font-semibold text-white shadow-sm shadow-brand-green-500/20 transition-all hover:bg-brand-green-400 hover:shadow-brand-green-500/30"
               >
                 Contact Us
                 <svg
