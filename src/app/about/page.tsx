@@ -105,13 +105,17 @@ export default function AboutPage() {
             <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
               <div className="relative aspect-[4/5] overflow-hidden rounded-3xl lg:col-span-5">
                 <Image
-                  src="/photos/consulting.jpg"
-                  alt="GagoTax advisory and consulting"
+                  src="/photos/yakubu.jpg"
+                  alt="Yakubu Gago, Founder & CPA at GagoTax"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-900/50 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 via-transparent to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <p className="text-base font-bold text-white">Yakubu Gago</p>
+                  <p className="text-sm text-white/75">Founder &amp; CPA</p>
+                </div>
               </div>
               <div className="lg:col-span-7">
                 <div className="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-brand-green-600">
