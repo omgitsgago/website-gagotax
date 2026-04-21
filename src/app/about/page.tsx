@@ -108,10 +108,10 @@ export default function AboutPage() {
                   src="/photos/yakubu.jpg"
                   alt="Yakubu Gago, Founder & CPA at GagoTax"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover scale-125 object-[center_10%] brightness-110"
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-900/70 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <p className="text-base font-bold text-white">Yakubu Gago</p>
                   <p className="text-sm text-white/75">Founder &amp; CPA</p>
