@@ -66,7 +66,11 @@ export function ContactForm() {
     const fd = new FormData(e.currentTarget);
     if (planParam) fd.set("plan", planParam);
 
-    // Prefer a real endpoint (Formspree, Resend wrapper, etc.) if configured.
+    // Inject Web3Forms access key if configured.
+    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+    if (accessKey) fd.set("access_key", accessKey);
+
+    // Prefer a real endpoint (Web3Forms, Formspree, etc.) if configured.
     if (endpoint) {
       try {
         const res = await fetch(endpoint, {
