@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Tax Plans",
   description:
     "GagoTax membership plans — year-round CPA access, discounts on every filing, and audit support. Starting at $12/mo billed annually.",
-  alternates: { canonical: "/tax-plans" },
+  alternates: { canonical: "/taxplans" },
 };
 
 export default function TaxPlansPage() {

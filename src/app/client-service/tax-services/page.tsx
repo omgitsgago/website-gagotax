@@ -4,6 +4,6 @@ import { useRouter } from "next/navigation";
 
 export default function TaxServicesRedirect() {
   const router = useRouter();
-  useEffect(() => { router.replace("/tax-plans"); }, [router]);
+  useEffect(() => { router.replace("/taxplans"); }, [router]);
   return null;
 }

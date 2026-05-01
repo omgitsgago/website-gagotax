@@ -15,7 +15,7 @@ const footerNav = {
       label: "Client Portal",
       external: true,
     },
-    { href: "/tax-plans", label: "Tax Plans" },
+    { href: "/taxplans", label: "Tax Plans" },
     { href: "/bookkeeping", label: "Bookkeeping" },
   ],
   Industries: [

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 const packages = [
   {
-    href: "/tax-plans",
+    href: "/taxplans",
     eyebrow: "Tax Services",
     title: "Tax Preparation Plans",
     description:
