@@ -57,7 +57,9 @@ export function ContactForm() {
     setService(defaultService);
   }
 
-  const endpoint = process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT;
+  const endpoint =
+    process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT ||
+    "https://api.web3forms.com/submit";
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -66,9 +68,10 @@ export function ContactForm() {
     const fd = new FormData(e.currentTarget);
     if (planParam) fd.set("plan", planParam);
 
-    // Inject Web3Forms access key if configured.
-    const accessKey = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
-    if (accessKey) fd.set("access_key", accessKey);
+    const accessKey =
+      process.env.NEXT_PUBLIC_WEB3FORMS_KEY ||
+      "02d5529c-9b66-433f-a214-32d46a6ba587";
+    fd.set("access_key", accessKey);
 
     // Prefer a real endpoint (Web3Forms, Formspree, etc.) if configured.
     if (endpoint) {
@@ -201,9 +204,7 @@ export function ContactForm() {
           aria-live="polite"
           className="mt-6 rounded-xl bg-brand-green-100 px-4 py-3 text-sm text-brand-green-800"
         >
-          {endpoint
-            ? "Message sent! We'll get back to you within 1–2 business days."
-            : "Your email client opened — just hit send and you're good to go."}
+          We&apos;ve received your message — we&apos;ll get in touch with you shortly.
         </div>
       )}
       {status === "error" && (
