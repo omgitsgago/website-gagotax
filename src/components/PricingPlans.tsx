@@ -84,7 +84,7 @@ const taxPlans: Plan[] = [
     featuresHeader: "Everything in Premium, plus:",
     features: [
       "15% off tax returns, notices & other services",
-      { text: "Priority turnaround on all requests & tax prep", bold: true },
+      "Priority turnaround on all requests & tax prep",
       "10% off bookkeeping subscription",
       "Quarterly tax planning sessions",
       { text: "Advisory Calls Included", footnote: 2 },
@@ -252,19 +252,6 @@ export function PricingPlans({
           {plans.map((plan) => (
             <PlanCard key={plan.id} plan={plan} billing={billing} />
           ))}
-        </div>
-
-        {/* Discovery CTA footer */}
-        <div className="mt-12 text-center">
-          <p className="text-sm text-slate-text">
-            Not sure which plan fits?{" "}
-            <Link
-              href="/contact"
-              className="font-semibold text-navy-900 underline underline-offset-4 hover:text-brand-blue-700"
-            >
-              Book a free 15-minute call →
-            </Link>
-          </p>
         </div>
 
         {/* Fine print — tax plans only */}
