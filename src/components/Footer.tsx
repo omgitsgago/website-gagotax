@@ -15,8 +15,8 @@ const footerNav = {
       label: "Client Portal",
       external: true,
     },
-    { href: "/client-service/tax-services", label: "Tax Plans" },
-    { href: "/client-service/bookkeeping", label: "Bookkeeping" },
+    { href: "/tax-plans", label: "Tax Plans" },
+    { href: "/bookkeeping", label: "Bookkeeping" },
   ],
   Industries: [
     { href: "/about#industries", label: "Music & Entertainment" },
