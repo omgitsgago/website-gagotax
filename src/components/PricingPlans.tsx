@@ -6,7 +6,7 @@ import { useState } from "react";
 type Billing = "monthly" | "annual";
 type Category = "tax" | "bookkeeping";
 
-type Feature = string | { text: string; bold?: boolean; footnote?: 1 | 2 | 3 };
+type Feature = string | { text: string; bold?: boolean; footnote?: 1 | 2 | 3 | 4 | 5 };
 
 type Plan = {
   id: string;
@@ -63,6 +63,7 @@ const taxPlans: Plan[] = [
       "IRS & state notice response",
       { text: "Audit support", footnote: 3 },
       "Annual tax planning session",
+      "Tax planning included",
       "Unlimited additional state returns",
       "Quarterly tax estimates — free",
       "Free federal extension filing",
@@ -83,13 +84,13 @@ const taxPlans: Plan[] = [
       "The white-glove tier — unlimited CPA access, audit support, and the deepest discounts we offer.",
     featuresHeader: "Everything in Premium, plus:",
     features: [
-      "20% off tax returns, notices & other services",
-      "15% off bookkeeping subscription",
+      "15% off tax returns, notices & other services",
+      { text: "Priority turnaround on all requests & tax prep", bold: true },
+      "10% off bookkeeping subscription",
       "Quarterly tax planning sessions",
       { text: "Advisory Calls Included", footnote: 2 },
-      "Unlimited CPA text access",
-      "Free Annual Statement of Information filing",
-      { text: "Priority turnaround on all requests & tax prep", bold: true },
+      { text: "Free Annual Statement of Information filing", footnote: 4 },
+      { text: "1099 filing — up to 5", footnote: 5 },
     ],
     cta: "Choose Platinum",
     hrefMonthly: "https://buy.stripe.com/fZu5kEgiS6pg3Wueklbsc06",
@@ -271,13 +272,22 @@ export function PricingPlans({
         {category === "tax" && (
           <div className="mt-6 space-y-1.5 px-2">
             <p className="text-xs leading-relaxed text-slate-400">
-              <sup className="mr-0.5 font-semibold">1</sup>Quick questions answered within the same business week. For complex matters, we&apos;ll schedule a call.
+              <sup className="mr-0.5 font-semibold">1</sup>Your CPA will respond during business hours only.
             </p>
             <p className="text-xs leading-relaxed text-slate-400">
               <sup className="mr-0.5 font-semibold">2</sup>Limited to up to 45 min. Once per month.
             </p>
             <p className="text-xs leading-relaxed text-slate-400">
               <sup className="mr-0.5 font-semibold">3</sup>Includes first 5 hours of IRS or state audit representation at no charge. Additional hours billed at a discounted member rate.
+            </p>
+            <p className="text-xs leading-relaxed text-slate-400">
+              <sup className="mr-0.5 font-semibold">4</sup>Excludes authority filing fees paid on your behalf.
+            </p>
+            <p className="text-xs leading-relaxed text-slate-400">
+              <sup className="mr-0.5 font-semibold">5</sup>Client is responsible for the filing fee.
+            </p>
+            <p className="pt-2 text-xs leading-relaxed text-slate-500">
+              Once service begins, all tax plans require a 1-year commitment. Cancellations before the 1-year mark are subject to paying the remaining balance.
             </p>
           </div>
         )}
