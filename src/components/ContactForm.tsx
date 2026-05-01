@@ -78,7 +78,8 @@ export function ContactForm() {
           body: fd,
           headers: { Accept: "application/json" },
         });
-        if (!res.ok) throw new Error(`Form endpoint responded ${res.status}`);
+        const data = await res.json().catch(() => ({ success: res.ok }));
+        if (!data.success && !res.ok) throw new Error(`Form endpoint responded ${res.status}`);
         setStatus("success");
         (e.currentTarget as HTMLFormElement).reset();
         setService(defaultService);
@@ -201,7 +202,7 @@ export function ContactForm() {
           className="mt-6 rounded-xl bg-brand-green-100 px-4 py-3 text-sm text-brand-green-800"
         >
           {endpoint
-            ? "Thanks — your message is in. We'll be in touch shortly."
+            ? "Message sent! We'll get back to you within 1–2 business days."
             : "Your email client opened — just hit send and you're good to go."}
         </div>
       )}
