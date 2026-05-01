@@ -63,9 +63,10 @@ export function ContactForm() {
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    const form = e.currentTarget;
     setStatus("submitting");
 
-    const fd = new FormData(e.currentTarget);
+    const fd = new FormData(form);
     if (planParam) fd.set("plan", planParam);
 
     const accessKey =
@@ -84,7 +85,7 @@ export function ContactForm() {
         const data = await res.json().catch(() => ({ success: res.ok }));
         if (!data.success && !res.ok) throw new Error(`Form endpoint responded ${res.status}`);
         setStatus("success");
-        (e.currentTarget as HTMLFormElement).reset();
+        form.reset();
         setService(defaultService);
         return;
       } catch (err) {
