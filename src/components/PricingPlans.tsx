@@ -37,7 +37,6 @@ const taxPlans: Plan[] = [
     featuresHeader: null,
     features: [
       "Maximum Refund Guarantee",
-      "5% off tax returns, notices & other services",
       "Free federal e-filing",
       "Free federal extension filing",
       "Review tax return with your CPA",
