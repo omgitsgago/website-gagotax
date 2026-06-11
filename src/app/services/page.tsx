@@ -167,15 +167,18 @@ export default function ServicesPage() {
             className={idx % 2 === 0 ? "bg-white py-20 sm:py-28" : "bg-cream-50 py-20 sm:py-28"}
           >
             <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
-              <div className="mx-auto max-w-3xl">
-                {/* Eyebrow with icon */}
-                <div className={`flex items-center gap-3 text-sm font-semibold uppercase tracking-widest ${cat.eyebrowColor}`}>
-                  <div className={`inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${cat.iconBg} text-white shadow-md`}>
-                    <div className="h-5 w-5">{cat.iconEl}</div>
+              <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+                {/* Left: icon + label */}
+                <div className="flex flex-col items-start justify-start pt-1 lg:col-span-4">
+                  <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${cat.iconBg} text-white shadow-lg`}>
+                    <div className="h-7 w-7">{cat.iconEl}</div>
                   </div>
-                  {cat.eyebrow}
+                  <p className={`mt-4 text-sm font-bold uppercase tracking-widest ${cat.eyebrowColor}`}>{cat.eyebrow}</p>
                 </div>
-                <h2 className="mt-4 text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
+
+                {/* Right: content */}
+                <div className="lg:col-span-8">
+                <h2 className="text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
                   {cat.title}
                 </h2>
                 <p className="mt-5 text-lg leading-relaxed text-slate-text">
@@ -224,6 +227,7 @@ export default function ServicesPage() {
                     </Link>
                   </div>
                 </div>
+              </div>
             </div>
           </section>
         ))}
