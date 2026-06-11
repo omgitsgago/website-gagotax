@@ -5,52 +5,38 @@ import { AnimateIn } from "./AnimateIn";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-white text-navy-900">
-      {/* Right-side photo — bleeds to edge, fades left into white */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute right-0 top-0 hidden h-full w-3/5 lg:block"
-      >
-        <Image
-          src="/photos/tax-accounting.jpg"
-          alt=""
-          fill
-          priority
-          sizes="60vw"
-          className="object-cover"
-        />
-        {/* Fade mask — white on the left edge, transparent on the right */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.92) 15%, rgba(255,255,255,0.45) 38%, rgba(255,255,255,0) 65%)",
-          }}
-        />
-      </div>
-
-      {/* Mobile/tablet: faint photo wash */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-25 lg:hidden"
-      >
-        <Image
-          src="/photos/tax-accounting.jpg"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.98) 100%)",
-          }}
-        />
-      </div>
-
       <div className="relative mx-auto w-full max-w-7xl px-6 pb-24 pt-36 sm:px-8 sm:pt-44 lg:px-10 lg:pb-36 lg:pt-52">
+        {/* Portrait — right side on desktop */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute bottom-0 right-0 hidden h-full w-[48%] lg:block"
+        >
+          <Image
+            src="/photos/yakubu.jpg"
+            alt="Yakubu Gago, Founder & CPA at GagoTax"
+            fill
+            priority
+            sizes="48vw"
+            className="object-cover object-top"
+          />
+          {/* Fade left edge into white */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.7) 18%, rgba(255,255,255,0) 45%)",
+            }}
+          />
+          {/* Fade bottom edge */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(255,255,255,0) 60%, #ffffff 100%)",
+            }}
+          />
+        </div>
+
         <div className="max-w-2xl">
           {/* Headline — lines animate in sequentially */}
           <h1 className="text-5xl font-extrabold leading-[1.02] tracking-tight text-navy-900 sm:text-6xl lg:text-[5rem] lg:leading-[1]">
