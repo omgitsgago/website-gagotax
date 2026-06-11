@@ -120,7 +120,7 @@ const bookkeepingPlans: Plan[] = [
       "Income Statement & Balance Sheet reports",
       "Accounts Payable & Receivable reports",
       "Monthly account reconciliation",
-      "Over-limit fee: $5 / transaction",
+      "Over-limit fee: $7 / transaction",
       { text: "Assistance from your CPA", footnote: 1 },
     ],
     cta: "Choose Startup",
@@ -163,7 +163,7 @@ const bookkeepingPlans: Plan[] = [
     features: [
       "Up to 150 transactions / month",
       "Up to 4 linked accounts",
-      "Over-limit fee: $5 / transaction",
+      "Over-limit fee: $4 / transaction",
       { text: "Contractor 1099 filings", footnote: 2 },
       "Company financial planning with CPA",
     ],
