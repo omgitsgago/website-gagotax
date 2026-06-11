@@ -167,27 +167,14 @@ export default function ServicesPage() {
             className={idx % 2 === 0 ? "bg-white py-20 sm:py-28" : "bg-cream-50 py-20 sm:py-28"}
           >
             <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
-              <div
-                className={`grid items-center gap-12 lg:grid-cols-12 lg:gap-16 ${
-                  idx % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""
-                }`}
-              >
-                {/* Icon panel */}
-                <div className="lg:col-span-6">
-                  <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-3xl border border-navy-900/10 bg-cream-50">
-                    <div className={`inline-flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br ${cat.iconBg} text-white shadow-lg`}>
-                      <div className="h-12 w-12">{cat.iconEl}</div>
-                    </div>
+              <div className="mx-auto max-w-3xl">
+                {/* Eyebrow with icon */}
+                <div className={`flex items-center gap-3 text-sm font-semibold uppercase tracking-widest ${cat.eyebrowColor}`}>
+                  <div className={`inline-flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${cat.iconBg} text-white shadow-md`}>
+                    <div className="h-5 w-5">{cat.iconEl}</div>
                   </div>
+                  {cat.eyebrow}
                 </div>
-
-                {/* Content */}
-                <div className="lg:col-span-6">
-                  {/* Eyebrow above title */}
-                  <div className={`flex items-center gap-2 text-sm font-semibold uppercase tracking-widest ${cat.eyebrowColor}`}>
-                    <span className={`h-1.5 w-1.5 rounded-full ${cat.dotColor}`} />
-                    {cat.eyebrow}
-                  </div>
                   <h2 className="mt-4 text-3xl font-bold tracking-tight text-navy-900 sm:text-4xl">
                     {cat.title}
                   </h2>
@@ -236,7 +223,6 @@ export default function ServicesPage() {
                       </svg>
                     </Link>
                   </div>
-                </div>
               </div>
             </div>
           </section>
