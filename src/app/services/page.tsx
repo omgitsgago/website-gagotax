@@ -174,9 +174,9 @@ export default function ServicesPage() {
               >
                 {/* Icon panel */}
                 <div className="lg:col-span-6">
-                  <div className={`flex aspect-[4/3] items-center justify-center overflow-hidden rounded-3xl bg-gradient-to-br ${cat.iconBg}`}>
-                    <div className="h-40 w-40 text-white/90 sm:h-52 sm:w-52">
-                      {cat.iconEl}
+                  <div className="flex aspect-[4/3] items-center justify-center overflow-hidden rounded-3xl border border-navy-900/10 bg-cream-50">
+                    <div className={`inline-flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br ${cat.iconBg} text-white shadow-lg`}>
+                      <div className="h-12 w-12">{cat.iconEl}</div>
                     </div>
                   </div>
                 </div>
