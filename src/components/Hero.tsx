@@ -9,7 +9,7 @@ export function Hero() {
         {/* Portrait — right side on desktop */}
         <div
           aria-hidden
-          className="pointer-events-none absolute bottom-0 right-0 hidden h-full w-[48%] lg:block"
+          className="pointer-events-none absolute bottom-0 right-0 hidden h-full w-[48%] overflow-hidden lg:block"
         >
           <Image
             src="/photos/yakubu.jpg"
