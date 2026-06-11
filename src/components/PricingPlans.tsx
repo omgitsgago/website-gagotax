@@ -107,9 +107,9 @@ const bookkeepingPlans: Plan[] = [
   {
     id: "bk-startup",
     name: "Startup",
-    monthly: 250,
-    annualPerMonth: 200,
-    annualTotal: 2400,
+    monthly: 350,
+    annualPerMonth: 280,
+    annualTotal: 3360,
     tagline: "For new businesses and sole proprietors.",
     description:
       "Clean books from day one — the financial foundation you need while you focus on building.",
@@ -120,56 +120,56 @@ const bookkeepingPlans: Plan[] = [
       "Income Statement & Balance Sheet reports",
       "Accounts Payable & Receivable reports",
       "Monthly account reconciliation",
-      "Over-limit fee: $7 / transaction",
-      "Assistance from your CPA",
+      "Over-limit fee: $5 / transaction",
+      { text: "Assistance from your CPA", footnote: 1 },
     ],
     cta: "Choose Startup",
-    hrefMonthly: "https://buy.stripe.com/6oU9AUeaKeVM8cKccdbsc0b",
-    hrefAnnual: "https://buy.stripe.com/8x23cw9Uu14WfFc2BDbsc0c",
+    hrefMonthly: "https://buy.stripe.com/6oU28sc2C9Bs64C7VXbsc0r",
+    hrefAnnual: "https://buy.stripe.com/14A14o0jU8xo78G5NPbsc0s",
     highlight: false,
   },
   {
     id: "bk-standard",
     name: "Standard",
-    monthly: 400,
-    annualPerMonth: 320,
-    annualTotal: 3840,
+    monthly: 550,
+    annualPerMonth: 440,
+    annualTotal: 5280,
     tagline: "For growing businesses ready for deeper reporting.",
     description:
       "Bigger reporting, payroll setup, and tax-ready financials — so April is never a scramble.",
     featuresHeader: "Everything in Startup, plus:",
     features: [
-      "Up to 60 transactions / month",
+      "Up to 80 transactions / month",
       "Up to 2 linked accounts",
       "Payroll setup with Gusto",
       "Over-limit fee: $5 / transaction",
       "Financial reports prepared for tax filing",
     ],
     cta: "Choose Standard",
-    hrefMonthly: "https://buy.stripe.com/6oU00k4Aa6pg3Wu2BDbsc0d",
-    hrefAnnual: "https://buy.stripe.com/6oU9AU1nYdRIakSb89bsc0e",
+    hrefMonthly: "https://buy.stripe.com/eVq9AUaYy6pgfFc901bsc0p",
+    hrefAnnual: "https://buy.stripe.com/28EcN6giSfZQ50y0tvbsc0q",
     highlight: true,
   },
   {
     id: "bk-deluxe",
     name: "Deluxe",
-    monthly: 550,
-    annualPerMonth: 440,
-    annualTotal: 5280,
+    monthly: 750,
+    annualPerMonth: 600,
+    annualTotal: 7200,
     tagline: "Full-service bookkeeping with CPA planning.",
     description:
       "White-glove bookkeeping with contractor filings and ongoing CPA-led financial planning.",
     featuresHeader: "Everything in Standard, plus:",
     features: [
-      "Up to 100 transactions / month",
+      "Up to 150 transactions / month",
       "Up to 4 linked accounts",
-      "Over-limit fee: $3 / transaction",
-      "Contractor 1099 filings",
-      { text: "Company financial planning with CPA", bold: true },
+      "Over-limit fee: $5 / transaction",
+      { text: "Contractor 1099 filings", footnote: 2 },
+      "Company financial planning with CPA",
     ],
     cta: "Choose Deluxe",
-    hrefMonthly: "https://buy.stripe.com/7sYcN67MmcNE64C5NPbsc0f",
-    hrefAnnual: "https://buy.stripe.com/5kQ3cw9UucNEboWgstbsc0g",
+    hrefMonthly: "https://buy.stripe.com/14A28sc2C290boWfopbsc0n",
+    hrefAnnual: "https://buy.stripe.com/9B67sM3w6eVMeB8gstbsc0o",
     highlight: false,
   },
 ];
@@ -258,6 +258,18 @@ export function PricingPlans({
             <PlanCard key={plan.id} plan={plan} billing={billing} />
           ))}
         </div>
+
+        {/* Fine print — bookkeeping only */}
+        {category === "bookkeeping" && (
+          <div className="mt-8 space-y-1.5 px-2">
+            <p className="text-xs leading-relaxed text-slate-400">
+              <sup className="mr-0.5 font-semibold">1</sup>Up to 1 email or call per month during business hours.
+            </p>
+            <p className="text-xs leading-relaxed text-slate-400">
+              <sup className="mr-0.5 font-semibold">2</sup>1099 preparation is included. Client is responsible for any applicable IRS filing fees.
+            </p>
+          </div>
+        )}
 
         {/* Fine print — tax plans only */}
         {category === "tax" && (
