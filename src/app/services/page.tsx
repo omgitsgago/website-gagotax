@@ -170,10 +170,10 @@ export default function ServicesPage() {
               <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
                 {/* Left: icon + label */}
                 <div className="flex flex-col items-center justify-center lg:col-span-4">
-                  <div className={`inline-flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br ${cat.iconBg} text-white shadow-xl`}>
-                    <div className="h-12 w-12">{cat.iconEl}</div>
+                  <div className={`flex w-full flex-col items-center justify-center gap-5 rounded-3xl bg-gradient-to-br ${cat.iconBg} py-16 text-white shadow-xl`}>
+                    <div className="h-20 w-20">{cat.iconEl}</div>
+                    <p className="text-sm font-bold uppercase tracking-widest text-white/90">{cat.eyebrow}</p>
                   </div>
-                  <p className={`mt-5 text-sm font-bold uppercase tracking-widest ${cat.eyebrowColor}`}>{cat.eyebrow}</p>
                 </div>
 
                 {/* Right: content */}
