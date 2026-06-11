@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
@@ -12,6 +11,28 @@ export const metadata: Metadata = {
   alternates: { canonical: "/services" },
 };
 
+const taxIcon = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-full w-full">
+    <path d="M9 12h6" /><path d="M9 16h6" /><path d="M9 8h6" />
+    <path d="M5 4h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" />
+  </svg>
+);
+
+const accountingIcon = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-full w-full">
+    <path d="M3 3v18h18" /><path d="m7 15 4-4 4 4 6-6" /><path d="M17 9h4v4" />
+  </svg>
+);
+
+const advisoryIcon = (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-full w-full">
+    <path d="M12 2v6" /><path d="M12 22v-6" />
+    <path d="M17 5.5 13.5 9" /><path d="M7 5.5 10.5 9" />
+    <path d="M17 18.5 13.5 15" /><path d="M7 18.5 10.5 15" />
+    <circle cx="12" cy="12" r="3" />
+  </svg>
+);
+
 const categories = [
   {
     id: "tax",
@@ -21,8 +42,8 @@ const categories = [
     title: "Tax returns done with strategy built in.",
     description:
       "From simple W-2 filings to complex multi-entity, multi-state returns, we prepare with the full year in mind — not just April.",
-    image: "/photos/tax-accounting.jpg",
-    imageAlt: "Tax preparation at GagoTax",
+    iconBg: "from-brand-blue-500 to-brand-blue-700",
+    iconEl: taxIcon,
     items: [
       {
         name: "Individual Tax Returns",
@@ -54,8 +75,8 @@ const categories = [
     title: "Clean books, clear numbers, confident decisions.",
     description:
       "Accurate financials are the foundation of every tax-saving strategy. We keep them tight so nothing slips.",
-    image: "/photos/personal-finance.jpg",
-    imageAlt: "Bookkeeping and financial statements",
+    iconBg: "from-brand-green-500 to-brand-green-700",
+    iconEl: accountingIcon,
     items: [
       {
         name: "Bookkeeping",
@@ -87,8 +108,8 @@ const categories = [
     title: "Advisory that pays for itself.",
     description:
       "Entity structure, compensation strategy, reinvestment planning — real decisions, real numbers, real impact.",
-    image: "/photos/consulting.jpg",
-    imageAlt: "Advisory consulting",
+    iconBg: "from-navy-800 to-navy-950",
+    iconEl: advisoryIcon,
     items: [
       {
         name: "Business Advisory",
@@ -151,17 +172,12 @@ export default function ServicesPage() {
                   idx % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""
                 }`}
               >
-                {/* Image */}
+                {/* Icon panel */}
                 <div className="lg:col-span-6">
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-                    <Image
-                      src={cat.image}
-                      alt={cat.imageAlt}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy-900/50 via-transparent to-transparent" />
+                  <div className={`flex aspect-[4/3] items-center justify-center overflow-hidden rounded-3xl bg-gradient-to-br ${cat.iconBg}`}>
+                    <div className="h-40 w-40 text-white/90 sm:h-52 sm:w-52">
+                      {cat.iconEl}
+                    </div>
                   </div>
                 </div>
 

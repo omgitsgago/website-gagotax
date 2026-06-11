@@ -17,7 +17,7 @@ export function Hero() {
             fill
             priority
             sizes="48vw"
-            className="object-cover object-top"
+            className="object-cover object-[center_5%] scale-125 origin-top"
           />
           {/* Fade left edge into white */}
           <div
