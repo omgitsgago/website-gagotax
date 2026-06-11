@@ -167,13 +167,13 @@ export default function ServicesPage() {
             className={idx % 2 === 0 ? "bg-white py-20 sm:py-28" : "bg-cream-50 py-20 sm:py-28"}
           >
             <div className="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
-              <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
+              <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
                 {/* Left: icon + label */}
-                <div className="flex flex-col items-start justify-start pt-1 lg:col-span-4">
-                  <div className={`inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br ${cat.iconBg} text-white shadow-lg`}>
-                    <div className="h-7 w-7">{cat.iconEl}</div>
+                <div className="flex flex-col items-center justify-center lg:col-span-4">
+                  <div className={`inline-flex h-24 w-24 items-center justify-center rounded-3xl bg-gradient-to-br ${cat.iconBg} text-white shadow-xl`}>
+                    <div className="h-12 w-12">{cat.iconEl}</div>
                   </div>
-                  <p className={`mt-4 text-sm font-bold uppercase tracking-widest ${cat.eyebrowColor}`}>{cat.eyebrow}</p>
+                  <p className={`mt-5 text-sm font-bold uppercase tracking-widest ${cat.eyebrowColor}`}>{cat.eyebrow}</p>
                 </div>
 
                 {/* Right: content */}
