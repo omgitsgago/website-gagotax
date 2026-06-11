@@ -16,7 +16,7 @@ export default function TaxPlansPage() {
       <Header />
       <main className="flex-1">
         {/* Hero */}
-        <section className="relative overflow-hidden bg-cream-50 pb-6 pt-24 sm:pb-8 sm:pt-32">
+        <section className="relative overflow-hidden bg-cream-50 pb-2 pt-24 sm:pb-3 sm:pt-32">
           <div className="relative mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="mx-auto max-w-3xl text-center">
               <div className="text-sm font-bold uppercase tracking-[0.25em] text-brand-blue-600">
