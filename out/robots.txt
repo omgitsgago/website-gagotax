@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /client-service
+Disallow: /client-service/
+
+Host: https://gagotax.com
+Sitemap: https://gagotax.com/sitemap.xml

@@ -118,6 +118,17 @@ export function ContactForm() {
       className="rounded-3xl border border-navy-900/10 bg-cream-50 p-8 shadow-sm sm:p-10"
       noValidate
     >
+      {/* Web3Forms honeypot — bots that tick this hidden box get silently rejected. */}
+      <input
+        type="checkbox"
+        name="botcheck"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="hidden"
+        style={{ display: "none" }}
+      />
+
       <h2 className="text-2xl font-bold text-navy-900 sm:text-3xl">
         Tell us a little about you.
       </h2>

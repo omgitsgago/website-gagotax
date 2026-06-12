@@ -1,0 +1,36 @@
+# GagoTax static site — Hostinger (LiteSpeed/Apache)
+# Serves the Next.js static export in this folder. No Node.js required.
+
+RewriteEngine On
+
+# --- Force HTTPS ---
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --- Clean URLs: serve /taxplans from taxplans.html, etc. ---
+# If the request isn't a real directory but "<path>.html" exists, serve that file.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L]
+
+# --- Custom error page ---
+ErrorDocument 404 /404.html
+
+# --- Security headers (defense-in-depth for a static brochure site) ---
+<IfModule mod_headers.c>
+  # Tell browsers to always use HTTPS for the next year
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  # Block MIME-type sniffing
+  Header always set X-Content-Type-Options "nosniff"
+  # Block the site from being framed (clickjacking protection)
+  Header always set X-Frame-Options "DENY"
+  # Limit referrer leakage
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Disable powerful browser features this site doesn't use
+  Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+  # Content Security Policy: only same-origin assets; the contact form may POST to Web3Forms.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://api.web3forms.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://api.web3forms.com; upgrade-insecure-requests"
+  # Don't advertise server internals
+  Header always unset X-Powered-By
+</IfModule>

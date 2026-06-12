@@ -15,7 +15,9 @@
 
 # next.js
 /.next/
-/out/
+# NOTE: /out/ is intentionally committed. Hostinger serves these built files
+# directly (via server.js); committing them guarantees the live site has the
+# finished pages even if the host doesn't run its own build step.
 
 # production
 /build
